@@ -1,0 +1,202 @@
+[
+  {
+    "id": "prod-001",
+    "name": "Classic Aviator Sunglasses",
+    "brand": "Ray-Ban",
+    "price": 149.99,
+    "description": "Iconic aviator style with polarized lenses. Perfect for outdoor activities and everyday wear. Features UV protection and durable metal frame.",
+    "category": "sunglasses",
+    "frame_type": "full-rim",
+    "frame_shape": "aviator",
+    "color": "Gold",
+    "image_url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500",
+    "stock": 50,
+    "rating": 4.5,
+    "review_count": 128,
+    "images": [
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500",
+      "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=500"
+    ]
+  },
+  {
+    "id": "prod-002",
+    "name": "Modern Rectangular Frames",
+    "brand": "Oakley",
+    "price": 199.99,
+    "description": "Sleek rectangular frames for everyday wear. Lightweight design with premium optical clarity. Ideal for professional settings.",
+    "category": "men",
+    "frame_type": "full-rim",
+    "frame_shape": "rectangular",
+    "color": "Black",
+    "image_url": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500",
+    "stock": 75,
+    "rating": 4.7,
+    "review_count": 95,
+    "images": [
+      "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500",
+      "https://images.unsplash.com/photo-1586431461229-b9457ec58a1c?w=500",
+      "https://images.unsplash.com/photo-1622445275576-721325763afe?w=500"
+    ]
+  },
+  {
+    "id": "prod-003",
+    "name": "Cat-Eye Fashion Glasses",
+    "brand": "Prada",
+    "price": 299.99,
+    "description": "Stylish cat-eye frames perfect for fashion-forward women. Elegant design with premium acetate material. Statement eyewear for any occasion.",
+    "category": "women",
+    "frame_type": "full-rim",
+    "frame_shape": "cat-eye",
+    "color": "Tortoise",
+    "image_url": "https://images.unsplash.com/photo-1551621852-22f5f7a29d1e?w=500",
+    "stock": 30,
+    "rating": 4.8,
+    "review_count": 67,
+    "images": [
+      "https://images.unsplash.com/photo-1551621852-22f5f7a29d1e?w=500",
+      "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=500",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500"
+    ]
+  },
+  {
+    "id": "prod-004",
+    "name": "Kids Fun Frames",
+    "brand": "Disney",
+    "price": 79.99,
+    "description": "Durable and colorful frames for active kids. Flexible material that withstands rough play. Fun designs kids love to wear.",
+    "category": "kids",
+    "frame_type": "full-rim",
+    "frame_shape": "round",
+    "color": "Blue",
+    "image_url": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=500",
+    "stock": 100,
+    "rating": 4.6,
+    "review_count": 145,
+    "images": [
+      "https://images.unsplash.com/photo-1577803645773-f96470509666?w=500",
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500",
+      "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500"
+    ]
+  },
+  {
+    "id": "prod-005",
+    "name": "Rimless Executive",
+    "brand": "Silhouette",
+    "price": 349.99,
+    "description": "Professional rimless design for executives. Minimalist style with maximum comfort. Lightweight titanium construction.",
+    "category": "men",
+    "frame_type": "rimless",
+    "frame_shape": "rectangular",
+    "color": "Silver",
+    "image_url": "https://images.unsplash.com/photo-1586431461229-b9457ec58a1c?w=500",
+    "stock": 40,
+    "rating": 4.9,
+    "review_count": 82,
+    "images": [
+      "https://images.unsplash.com/photo-1586431461229-b9457ec58a1c?w=500",
+      "https://images.unsplash.com/photo-1622445275576-721325763afe?w=500",
+      "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500"
+    ]
+  },
+  {
+    "id": "prod-006",
+    "name": "Round Vintage Specs",
+    "brand": "Warby Parker",
+    "price": 129.99,
+    "description": "Retro round frames with modern comfort. Classic design updated for today. Perfect for vintage enthusiasts.",
+    "category": "women",
+    "frame_type": "full-rim",
+    "frame_shape": "round",
+    "color": "Brown",
+    "image_url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500",
+    "stock": 60,
+    "rating": 4.4,
+    "review_count": 110,
+    "images": [
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500",
+      "https://images.unsplash.com/photo-1551621852-22f5f7a29d1e?w=500",
+      "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=500"
+    ]
+  },
+  {
+    "id": "prod-007",
+    "name": "Sports Performance Sunglasses",
+    "brand": "Nike",
+    "price": 179.99,
+    "description": "High-performance sports eyewear with UV protection. Designed for athletes and active lifestyles. Impact-resistant lenses.",
+    "category": "sunglasses",
+    "frame_type": "half-rim",
+    "frame_shape": "rectangular",
+    "color": "Red",
+    "image_url": "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=500",
+    "stock": 45,
+    "rating": 4.7,
+    "review_count": 92,
+    "images": [
+      "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=500",
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500"
+    ]
+  },
+  {
+    "id": "prod-008",
+    "name": "Designer Wayfarer",
+    "brand": "Gucci",
+    "price": 399.99,
+    "description": "Luxury wayfarer style with signature details. Premium Italian craftsmanship. Statement piece for fashion lovers.",
+    "category": "women",
+    "frame_type": "full-rim",
+    "frame_shape": "wayfarer",
+    "color": "Black",
+    "image_url": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=500",
+    "stock": 25,
+    "rating": 4.9,
+    "review_count": 58,
+    "images": [
+      "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=500",
+      "https://images.unsplash.com/photo-1551621852-22f5f7a29d1e?w=500",
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500"
+    ]
+  },
+  {
+    "id": "prod-009",
+    "name": "Kids Safety Glasses",
+    "brand": "SafeView",
+    "price": 59.99,
+    "description": "Impact-resistant frames for child safety. Flexible and comfortable for all-day wear. Designed with parents' peace of mind.",
+    "category": "kids",
+    "frame_type": "full-rim",
+    "frame_shape": "oval",
+    "color": "Pink",
+    "image_url": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500",
+    "stock": 80,
+    "rating": 4.5,
+    "review_count": 134,
+    "images": [
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500",
+      "https://images.unsplash.com/photo-1577803645773-f96470509666?w=500",
+      "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500"
+    ]
+  },
+  {
+    "id": "prod-010",
+    "name": "Half-Rim Professional",
+    "brand": "Persol",
+    "price": 249.99,
+    "description": "Elegant half-rim design for professionals. Sophisticated style with comfort. Timeless design that never goes out of style.",
+    "category": "men",
+    "frame_type": "half-rim",
+    "frame_shape": "rectangular",
+    "color": "Gunmetal",
+    "image_url": "https://images.unsplash.com/photo-1622445275576-721325763afe?w=500",
+    "stock": 55,
+    "rating": 4.6,
+    "review_count": 76,
+    "images": [
+      "https://images.unsplash.com/photo-1622445275576-721325763afe?w=500",
+      "https://images.unsplash.com/photo-1586431461229-b9457ec58a1c?w=500",
+      "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500"
+    ]
+  }
+]

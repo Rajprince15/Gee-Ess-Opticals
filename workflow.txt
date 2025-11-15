@@ -1,0 +1,129 @@
+LENSKART-STYLE EYEWEAR E-COMMERCE FRONTEND - WORKFLOW
+=====================================================
+
+PROJECT: Frontend-only React application with mock data (backend-ready architecture)
+TECH STACK: React 18 + Vite + TailwindCSS + Context API + React Router v6
+
+=====================================================
+PHASE 1: FOUNDATION SETUP ⚙️
+=====================================================
+[✓] Initialize React 18 + Vite project
+[✓] Setup TailwindCSS with custom configuration
+[✓] Create complete folder structure
+[ ] Setup React Router v6 with all routes (PENDING - Next up)
+[✓] Create mock data files (products, users, orders, coupons, reviews, addresses)
+[✓] Create workflow.txt file
+[✓] Create PWA files (manifest.json, service-worker.js)
+STATUS: ✅ COMPLETED
+
+=====================================================
+PHASE 2: CORE INFRASTRUCTURE 🏗️
+=====================================================
+[✓] Implement AuthContext with localStorage
+[✓] Implement CartContext with persistence
+[✓] Implement WishlistContext with persistence
+[✓] Implement ProductContext (filters, search, sort)
+[✓] Implement CompareContext (max 3 products)
+[✓] Implement ThemeContext (dark/light mode)
+[✓] Create API service layer (mock functions - 40+ API methods)
+[✓] Build custom hooks (useDebounce, useToast)
+[✓] Create utility functions (localStorage, formatters, validators)
+STATUS: ✅ COMPLETED
+
+=====================================================
+PHASE 3: REUSABLE COMPONENTS 🧩
+=====================================================
+[✓] UI Components: Button, Modal, Toast, Loader, Skeleton, Pagination
+[ ] Product Components: ProductCard, ProductGrid, ProductFilter, PriceSlider (IN PROGRESS)
+[✓] Form Components: Input, Select (Checkbox, Radio - pending)
+[✓] Review Components: RatingStars (ReviewSection - pending)
+[ ] Layout Components: Navbar, Footer, Breadcrumbs (PENDING)
+[ ] Other: AddressCard, AdminTable (PENDING)
+STATUS: ⏳ 50% COMPLETED (Core UI done, Product/Layout components pending)
+
+=====================================================
+PHASE 4: MAIN SHOPPING PAGES 🛍️
+=====================================================
+[ ] Home Page (hero banners, categories, trending products)
+[ ] Product Listing Page (filters, sorting, pagination, search)
+[ ] Product Details Page (image gallery, reviews, add to cart)
+[ ] Login/Register Page (mock authentication)
+STATUS: IN PROGRESS
+
+=====================================================
+PHASE 5: CART & CHECKOUT FLOW 🛒
+=====================================================
+[ ] Cart Page (update quantity, remove items, apply coupons)
+[ ] Wishlist Page (move to cart, remove items)
+[ ] Compare Products Page (side-by-side comparison of 3 products)
+[ ] Checkout Page (address selection, payment mock)
+[ ] Order Success Page (order confirmation)
+STATUS: IN PROGRESS
+
+=====================================================
+PHASE 6: USER & ADMIN AREAS 👤
+=====================================================
+[ ] User Profile Page (edit info, manage addresses)
+[ ] Orders History Page (view past orders, track status)
+[ ] Admin Dashboard Page (CRUD on products, stats, manage coupons)
+[ ] Error Pages (404, 500)
+STATUS: IN PROGRESS
+
+=====================================================
+PHASE 7: POLISH & FEATURES ✨
+=====================================================
+[ ] Dark mode implementation (ThemeContext)
+[ ] Smooth animations & transitions
+[ ] Search autocomplete functionality
+[ ] Recently viewed products tracking
+[ ] PWA manifest + service worker structure
+[ ] Breadcrumbs navigation
+[ ] Quick view product modal
+[ ] Final responsive design testing
+[ ] Performance optimization
+STATUS: IN PROGRESS
+
+=====================================================
+KEY DECISIONS MADE
+=====================================================
+✓ Images: Use MySQL schema URLs (consistent with future backend)
+✓ Auth: Mock users in localStorage with validation
+✓ Admin: Functional CRUD on mock data (not just UI mockup)
+✓ PWA: manifest.json + empty service-worker.js (structure only)
+
+=====================================================
+TECHNICAL NOTES
+=====================================================
+- All API calls use mock service layer → easy to swap for real backend
+- Mock data matches MySQL schema structure exactly
+- State persists via localStorage (cart, wishlist, auth, theme)
+- Context API for global state management
+- No backend implementation needed in this phase
+- All components have data-testid for future testing
+
+=====================================================
+PROGRESS TRACKING
+=====================================================
+Total Phases: 7
+✅ Completed: 2 (Phase 1, Phase 2)
+⏳ In Progress: 1 (Phase 3 - 50% done)
+⏸️ Pending: 4 (Phase 4, 5, 6, 7)
+
+=====================================================
+WHAT'S BEEN BUILT SO FAR (Current Snapshot)
+=====================================================
+📁 FOLDER STRUCTURE: Complete (components, pages, contexts, services, mock, utils, hooks)
+📦 DEPENDENCIES: React 18, Vite, TailwindCSS, React Router, Axios installed
+🗄️ MOCK DATA: 6 JSON files (products, users, orders, coupons, reviews, addresses)
+🔌 CONTEXTS: 6 Context providers (Auth, Cart, Wishlist, Product, Compare, Theme)
+⚡ API SERVICE: 40+ mock API functions ready for backend swap
+🎨 UI COMPONENTS: 9 components (Button, Loader, Skeleton, Toast, Modal, Pagination, RatingStars, Input, Select)
+🛠️ UTILITIES: localStorage wrapper, formatters, validators
+🪝 CUSTOM HOOKS: useDebounce, useToast
+🌐 PWA: manifest.json + service-worker.js structure
+
+NEXT STEPS:
+1. Complete remaining Phase 3 components (Product components, Layout, etc.)
+2. Setup React Router with all routes
+3. Build all 14 pages (Phase 4-6)
+4. Polish & features (Phase 7)

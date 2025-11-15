@@ -1,0 +1,35 @@
+[
+  {
+    "id": "addr-001",
+    "user_id": "user-001",
+    "label": "Home",
+    "full_address": "123 Main St, Apt 4B",
+    "city": "New York",
+    "state": "NY",
+    "zip_code": "10001",
+    "country": "USA",
+    "is_default": true
+  },
+  {
+    "id": "addr-002",
+    "user_id": "user-001",
+    "label": "Work",
+    "full_address": "456 Corporate Blvd, Suite 200",
+    "city": "New York",
+    "state": "NY",
+    "zip_code": "10005",
+    "country": "USA",
+    "is_default": false
+  },
+  {
+    "id": "addr-003",
+    "user_id": "user-003",
+    "label": "Home",
+    "full_address": "789 Oak St",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip_code": "90001",
+    "country": "USA",
+    "is_default": true
+  }
+]

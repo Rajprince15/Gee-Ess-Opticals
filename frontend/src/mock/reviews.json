@@ -1,0 +1,74 @@
+[
+  {
+    "id": "review-001",
+    "product_id": "prod-001",
+    "user_id": "user-001",
+    "user_name": "John Doe",
+    "rating": 5,
+    "comment": "Absolutely love these aviators! Great quality and very comfortable to wear all day.",
+    "created_at": "2024-10-25T15:30:00Z"
+  },
+  {
+    "id": "review-002",
+    "product_id": "prod-001",
+    "user_id": "user-003",
+    "user_name": "Jane Smith",
+    "rating": 4,
+    "comment": "Classic style, good build quality. Only downside is the price, but worth it for Ray-Ban quality.",
+    "created_at": "2024-10-20T11:15:00Z"
+  },
+  {
+    "id": "review-003",
+    "product_id": "prod-002",
+    "user_id": "user-001",
+    "user_name": "John Doe",
+    "rating": 5,
+    "comment": "Perfect for work! The rectangular shape fits my face well and looks professional.",
+    "created_at": "2024-11-05T09:45:00Z"
+  },
+  {
+    "id": "review-004",
+    "product_id": "prod-003",
+    "user_id": "user-003",
+    "user_name": "Jane Smith",
+    "rating": 5,
+    "comment": "Stunning cat-eye frames! Get so many compliments. Prada quality is unmatched.",
+    "created_at": "2024-10-18T14:20:00Z"
+  },
+  {
+    "id": "review-005",
+    "product_id": "prod-004",
+    "user_id": "user-001",
+    "user_name": "John Doe",
+    "rating": 4,
+    "comment": "Got these for my daughter. She loves them! Very durable and comfortable.",
+    "created_at": "2024-09-30T16:00:00Z"
+  },
+  {
+    "id": "review-006",
+    "product_id": "prod-005",
+    "user_id": "user-003",
+    "user_name": "Jane Smith",
+    "rating": 5,
+    "comment": "Lightweight and elegant. Perfect for business meetings. Highly recommend!",
+    "created_at": "2024-08-15T10:30:00Z"
+  },
+  {
+    "id": "review-007",
+    "product_id": "prod-007",
+    "user_id": "user-003",
+    "user_name": "Jane Smith",
+    "rating": 5,
+    "comment": "Best sports sunglasses I've ever owned. Stay in place during runs and cycling.",
+    "created_at": "2024-11-12T08:00:00Z"
+  },
+  {
+    "id": "review-008",
+    "product_id": "prod-008",
+    "user_id": "user-001",
+    "user_name": "John Doe",
+    "rating": 5,
+    "comment": "Luxury at its finest! Worth every penny. The Gucci logo is subtle but classy.",
+    "created_at": "2024-07-22T12:45:00Z"
+  }
+]
