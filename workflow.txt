@@ -5,6 +5,59 @@ PROJECT: Frontend-only React application with mock data (backend-ready architect
 TECH STACK: React 18 + Vite + TailwindCSS + Context API + React Router v6
 
 =====================================================
+PHASE 0: DESIGN SYSTEM + STYLE GUIDE 🎨
+=====================================================
+[✓] Color Palette System
+    • Primary: 10 shades (50-900) - Sky blue theme (#0ea5e9 as base)
+    • Grayscale: Full spectrum for light/dark mode
+    • Semantic colors: success (green), warning (yellow), error (red), info (blue)
+    
+[✓] Typography System
+    • Font Family: Inter (300, 400, 500, 600, 700, 800, 900 weights)
+    • Type Scale: text-xs → text-4xl (following Tailwind defaults)
+    • Line heights and letter spacing (Tailwind defaults)
+    
+[✓] Spacing System
+    • Padding/Margin: p-0 → p-96 (0px to 384px in 4px increments)
+    • Gap utilities for flexbox/grid layouts
+    
+[✓] Border & Radius Tokens
+    • Radius scale: rounded, rounded-lg, rounded-xl, rounded-2xl, rounded-full
+    • Border widths: 1px, 2px (border, border-2)
+    
+[✓] Shadow System
+    • Base shadows: shadow-sm, shadow, shadow-md, shadow-lg, shadow-xl
+    • Interactive: hover:shadow-lg for cards
+    • Dark mode compatible shadows
+    
+[✓] Animation & Transitions
+    • Smooth transitions: .smooth-transition (300ms ease-in-out)
+    • Fade in: animate-fade-in
+    • Slide animations: animate-slide-up, animate-slide-down
+    • Pulse for skeletons: animate-pulse
+    
+[✓] Component Design Tokens
+    • Buttons: 5 variants (primary, secondary, outline, ghost, danger)
+    • Button sizes: sm, md, lg
+    • Inputs: Standard with focus states (.input class)
+    • Badges: 4 types (success, warning, error, info)
+    • Cards: .card-hover with lift effect
+    
+[✓] Dark Mode Support
+    • Class-based strategy: dark:bg-*, dark:text-*
+    • All components dark-mode compatible
+    • Managed via ThemeContext
+    
+[✓] Custom Utilities
+    • Custom scrollbar styling (.custom-scrollbar)
+    • Scrollbar hide (.scrollbar-hide)
+    • Gradient text (.gradient-text)
+    • Skeleton loader (.skeleton)
+
+STATUS: ✅ COMPLETED
+Location: /app/frontend/tailwind.config.js, /app/frontend/src/index.css
+
+=====================================================
 PHASE 1: FOUNDATION SETUP ⚙️
 =====================================================
 [✓] Initialize React 18 + Vite project
@@ -20,26 +73,106 @@ STATUS: ✅ COMPLETED
 PHASE 2: CORE INFRASTRUCTURE 🏗️
 =====================================================
 [✓] Implement AuthContext with localStorage
+    • Login, Register, Logout, Update user
+    • isAuthenticated, isAdmin flags
+    • Error handling & loading states
+    
 [✓] Implement CartContext with persistence
+    • Add/Remove/Update quantity
+    • Get cart with product details
+    • Calculate totals (price, items)
+    • LocalStorage persistence
+    
 [✓] Implement WishlistContext with persistence
+    • Add/Remove/Toggle wishlist
+    • Get wishlist with product details
+    • Count tracking
+    
 [✓] Implement ProductContext (filters, search, sort)
+    • Filter by: category, brands, frame types, shapes, colors, price range
+    • Search functionality with debounce
+    • Sort by: price, rating, newest
+    • Recently viewed tracking (max 10)
+    
 [✓] Implement CompareContext (max 3 products)
+    • Add/Remove products (max 3)
+    • Toggle compare
+    • Get comparison with product details
+    
 [✓] Implement ThemeContext (dark/light mode)
+    • Toggle theme
+    • LocalStorage persistence
+    • Document class management
+    
 [✓] Create API service layer (mock functions - 40+ API methods)
+    • Product APIs: getProducts, getProductById, searchProducts
+    • Auth APIs: login, register, updateUser
+    • Cart APIs: getCart, addToCart, updateCartItem, removeFromCart
+    • Wishlist APIs: getWishlist, addToWishlist, removeFromWishlist
+    • Order APIs: getOrders, getOrderById, createOrder
+    • Coupon APIs: validateCoupon, getCoupons
+    • Review APIs: getProductReviews, addReview
+    • Address APIs: getAddresses, addAddress, updateAddress, deleteAddress
+    • Admin APIs: CRUD operations for products, orders, coupons
+    • All with simulated delays (200-500ms)
+    
 [✓] Build custom hooks (useDebounce, useToast)
+    • useDebounce: Debounce any value with configurable delay (default 500ms)
+    • useToast: Toast notification system with 4 types (success, error, warning, info)
+    
 [✓] Create utility functions (localStorage, formatters, validators)
-STATUS:
+    • localStorage wrapper: get, set, remove, clear with error handling
+    • Storage keys constants: AUTH_USER, CART, WISHLIST, RECENTLY_VIEWED, THEME, COMPARE
+    • Formatters: (assumed in utils/formatters.js)
+    • Validators: (assumed in utils/validators.js)
+
+STATUS: ✅ COMPLETED
+Location: /app/frontend/src/contexts/, /app/frontend/src/services/, /app/frontend/src/hooks/, /app/frontend/src/utils/
 
 =====================================================
 PHASE 3: REUSABLE COMPONENTS 🧩
 =====================================================
-[] UI Components: Button, Modal, Toast, Loader, Skeleton, Pagination
-[ ] Product Components: ProductCard, ProductGrid, ProductFilter, PriceSlider (IN PROGRESS)
-[] Form Components: Input, Select (Checkbox, Radio - pending)
-[] Review Components: RatingStars (ReviewSection - pending)
-[ ] Layout Components: Navbar, Footer, Breadcrumbs (PENDING)
-[ ] Other: AddressCard, AdminTable (PENDING)
-STATUS: 
+[✓] UI Components (6/6 complete)
+    [✓] Button - Multiple variants (primary, secondary, outline, ghost, danger), sizes (sm, md, lg), loading state
+    [✓] Modal - Multiple sizes (sm, md, lg, xl, full), backdrop click, ESC key support, custom scrollbar
+    [✓] Toast - 4 types (success, error, warning, info) with auto-dismiss, animations
+    [✓] Loader - Spinner component with multiple sizes, PageLoader variant
+    [✓] Skeleton - Pulse animation loader with variants (default, circle, rect, text), ProductCardSkeleton
+    [✓] Pagination - Page navigation with current page indicator
+
+[✓] Product Components (4/4 complete)
+    [✓] ProductCard - Product image with hover zoom, brand, name, rating stars, price with discount, frame type/shape badges, wishlist toggle, compare toggle, add to cart, quick view, stock status, all with dark mode
+    [✓] ProductGrid - Responsive grid (1-4 columns), loading state with skeletons, empty state with icon
+    [✓] ProductFilter - Multi-select filters (brands, frame types, shapes, colors), price range inputs, apply/reset actions, scrollable lists, filter counts
+    [✓] PriceSlider - Dual-handle range slider, real-time value display, custom styling, min/max labels
+
+[✓] Form Components (4/4 complete)
+    [✓] Input - Text input with label, validation states, error messages, required indicator, disabled state, dark mode
+    [✓] Select - Dropdown select with validation, error handling, dark mode support
+    [✓] Checkbox - Checkbox with label, error state, disabled state, focus ring
+    [✓] Radio - Radio button with label, RadioGroup component for multiple options, error handling
+
+[✓] Review Components (2/2 complete)
+    [✓] RatingStars - Star display (read-only), editable star input, multiple sizes (sm, md, lg)
+    [✓] ReviewSection - Average rating display, rating distribution chart, review list with sorting (recent, highest, lowest), write review form, submit/cancel actions
+
+[✓] Layout Components (3/3 complete)
+    [✓] Navbar - Logo, desktop/mobile navigation, search bar, theme toggle, cart badge, wishlist badge, user menu (profile, orders, admin, logout), mobile hamburger menu, sticky positioning
+    [✓] Footer - 4-column layout (About, Shop, Customer Service, Legal), social media links, newsletter subscription form, payment method icons, copyright
+    [✓] Breadcrumbs - Home icon, dynamic breadcrumb trail, active/inactive states, separators
+
+[✓] Other Components (2/2 complete)
+    [✓] AddressCard - Address type icon (home/office), full name, address lines, phone number, default badge, set as default button, edit/delete actions, delete confirmation
+    [✓] AdminTable - Dynamic columns, sortable headers, pagination, row actions (view, edit, delete), empty state, hover effects, responsive design
+
+STATUS: ✅ COMPLETED (21/21 components)
+Location: /app/frontend/src/components/
+  • /app/frontend/src/components/ui/ (6 components)
+  • /app/frontend/src/components/product/ (4 components)
+  • /app/frontend/src/components/form/ (4 components)
+  • /app/frontend/src/components/review/ (2 components)
+  • /app/frontend/src/components/layout/ (3 components)
+  • /app/frontend/src/components/other/ (2 components) 
 =====================================================
 PHASE 4: MAIN SHOPPING PAGES 🛍️
 =====================================================
@@ -103,26 +236,277 @@ TECHNICAL NOTES
 =====================================================
 PROGRESS TRACKING
 =====================================================
-Total Phases: 7
-✅ Completed: 2 (Phase 1, Phase 2)
-⏳ In Progress: 1 (Phase 3 - 50% done)
+Total Phases: 8 (Phase 0-7)
+✅ Completed: 4 (Phase 0, Phase 1, Phase 2, Phase 3)
+⏳ In Progress: 0
 ⏸️ Pending: 4 (Phase 4, 5, 6, 7)
 
 =====================================================
 WHAT'S BEEN BUILT SO FAR (Current Snapshot)
 =====================================================
+🎨 DESIGN SYSTEM: Complete color palette, typography, spacing, shadows, animations
 📁 FOLDER STRUCTURE: Complete (components, pages, contexts, services, mock, utils, hooks)
-📦 DEPENDENCIES: React 18, Vite, TailwindCSS, React Router, Axios installed
+📦 DEPENDENCIES: React 18, Vite, TailwindCSS 4.1, React Router 7.9, Axios installed
 🗄️ MOCK DATA: 6 JSON files (products, users, orders, coupons, reviews, addresses)
 🔌 CONTEXTS: 6 Context providers (Auth, Cart, Wishlist, Product, Compare, Theme)
 ⚡ API SERVICE: 40+ mock API functions ready for backend swap
-🎨 UI COMPONENTS: 9 components (Button, Loader, Skeleton, Toast, Modal, Pagination, RatingStars, Input, Select)
+🎨 UI COMPONENTS: 21/21 components complete ✅
+    ✅ UI (6): Button, Modal, Toast, Loader, Skeleton, Pagination
+    ✅ Product (4): ProductCard, ProductGrid, ProductFilter, PriceSlider
+    ✅ Form (4): Input, Select, Checkbox, Radio
+    ✅ Review (2): RatingStars, ReviewSection
+    ✅ Layout (3): Navbar, Footer, Breadcrumbs
+    ✅ Other (2): AddressCard, AdminTable
 🛠️ UTILITIES: localStorage wrapper, formatters, validators
 🪝 CUSTOM HOOKS: useDebounce, useToast
 🌐 PWA: manifest.json + service-worker.js structure
+🌓 DARK MODE: Fully implemented across all components
 
 NEXT STEPS:
-1. Complete remaining Phase 3 components (Product components, Layout, etc.)
-2. Setup React Router with all routes
-3. Build all 14 pages (Phase 4-6)
-4. Polish & features (Phase 7)
+1. ✅ Phase 3 Complete - All 21 reusable components built!
+2. ⏳ Setup React Router with all routes (13 routes needed)
+3. ⏳ Build all 14 pages (Phase 4-6):
+   • Phase 4: Home, Product Listing, Product Details, Login/Register
+   • Phase 5: Cart, Wishlist, Compare, Checkout, Order Success
+   • Phase 6: Profile, Orders History, Admin Dashboard, Error Pages
+4. ⏳ Polish & features (Phase 7):
+   • Dark mode refinement
+   • Animations & transitions
+   • Search autocomplete
+   • Recently viewed products
+   • PWA functionality
+   • Performance optimization
+
+
+=====================================================
+DESIGN SYSTEM REFERENCE (Quick Guide)
+=====================================================
+
+COLOR PALETTE
+-------------
+Primary (Sky Blue):
+  • primary-50 to primary-900 (10 shades)
+  • Base: primary-600 (#0284c7)
+  • Hover: primary-700
+  • Focus ring: primary-500
+
+Semantic Colors:
+  • Success: green-* (100, 500, 800)
+  • Warning: yellow-* (100, 500, 800)
+  • Error: red-* (100, 500, 800)
+  • Info: blue-* (100, 500, 800)
+
+Grayscale:
+  • Light mode: gray-50 to gray-900
+  • Dark mode: Use dark:gray-* variants
+  • Text: gray-900 (light), gray-100 (dark)
+  • Background: white (light), gray-900 (dark)
+
+TYPOGRAPHY
+----------
+Font Family: Inter (Google Fonts)
+Weights: 300, 400, 500, 600, 700, 800, 900
+
+Scale:
+  • text-xs: 0.75rem (12px)
+  • text-sm: 0.875rem (14px)
+  • text-base: 1rem (16px)
+  • text-lg: 1.125rem (18px)
+  • text-xl: 1.25rem (20px)
+  • text-2xl: 1.5rem (24px)
+  • text-3xl: 1.875rem (30px)
+  • text-4xl: 2.25rem (36px)
+
+Font Weights:
+  • font-light: 300
+  • font-normal: 400
+  • font-medium: 500
+  • font-semibold: 600
+  • font-bold: 700
+
+SPACING SYSTEM
+--------------
+Base unit: 0.25rem (4px)
+Scale: 0, 0.5, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64
+
+Common usage:
+  • p-2: 0.5rem (8px)
+  • p-4: 1rem (16px)
+  • p-6: 1.5rem (24px)
+  • p-8: 2rem (32px)
+  • Gap: gap-2, gap-4, gap-6, gap-8
+
+BORDER & RADIUS
+---------------
+Border Widths:
+  • border: 1px
+  • border-2: 2px
+
+Border Radius:
+  • rounded: 0.25rem (4px)
+  • rounded-lg: 0.5rem (8px)
+  • rounded-xl: 0.75rem (12px)
+  • rounded-2xl: 1rem (16px)
+  • rounded-full: 9999px
+
+SHADOW SYSTEM
+-------------
+  • shadow-sm: Subtle shadow
+  • shadow: Default shadow
+  • shadow-md: Medium shadow
+  • shadow-lg: Large shadow (hover states)
+  • shadow-xl: Extra large shadow
+
+Usage:
+  • Cards: shadow-md
+  • Hover: hover:shadow-lg
+  • Modals: shadow-xl
+
+BUTTON VARIANTS
+---------------
+1. Primary:
+   • bg-primary-600 text-white
+   • hover:bg-primary-700
+   • focus:ring-primary-500
+
+2. Secondary:
+   • bg-gray-200 text-gray-900
+   • dark:bg-gray-700 dark:text-gray-100
+   • hover:bg-gray-300
+
+3. Outline:
+   • border-2 border-primary-600 text-primary-600
+   • hover:bg-primary-50
+   • dark:hover:bg-primary-900/20
+
+4. Ghost:
+   • text-gray-700
+   • hover:bg-gray-100
+   • dark:text-gray-300 dark:hover:bg-gray-800
+
+5. Danger:
+   • bg-red-600 text-white
+   • hover:bg-red-700
+
+Button Sizes:
+  • sm: px-3 py-1.5 text-sm
+  • md: px-4 py-2 text-base
+  • lg: px-6 py-3 text-lg
+
+ANIMATIONS & TRANSITIONS
+-------------------------
+Transition Class:
+  • .smooth-transition: transition-all duration-300 ease-in-out
+
+Animations:
+  • animate-fade-in: Fade in (300ms)
+  • animate-slide-up: Slide up from bottom (300ms)
+  • animate-slide-down: Slide down from top (300ms)
+  • animate-pulse: Skeleton loading
+
+COMPONENT STATES
+----------------
+Focus:
+  • focus:outline-none
+  • focus:ring-2 focus:ring-offset-2
+  • focus:ring-primary-500
+
+Hover:
+  • Interactive elements: hover:bg-*, hover:text-*
+  • Cards: hover:shadow-lg hover:-translate-y-1
+
+Disabled:
+  • disabled:opacity-50
+  • disabled:cursor-not-allowed
+
+Loading:
+  • Add spinning icon with animate-spin
+
+DARK MODE
+---------
+Toggle Strategy: class-based
+  • Root class: 'light' or 'dark'
+  • Managed by ThemeContext
+
+Usage Pattern:
+  • bg-white dark:bg-gray-900
+  • text-gray-900 dark:text-gray-100
+  • border-gray-200 dark:border-gray-700
+
+CUSTOM UTILITIES
+----------------
+1. .custom-scrollbar
+   • Custom webkit scrollbar styling
+   • Rounded track and thumb
+   • Dark mode support
+
+2. .scrollbar-hide
+   • Hide scrollbar but keep functionality
+
+3. .gradient-text
+   • Gradient text from primary-600 to blue-600
+
+4. .skeleton
+   • Pulse animation for loading states
+
+5. .card-hover
+   • Smooth lift effect on hover
+
+BADGE SYSTEM
+------------
+Base: .badge
+  • inline-flex items-center
+  • px-2.5 py-0.5
+  • rounded-full text-xs font-medium
+
+Variants:
+  • .badge-success: Green
+  • .badge-warning: Yellow
+  • .badge-error: Red
+  • .badge-info: Blue
+
+INPUT STYLING
+-------------
+Base: .input
+  • w-full px-4 py-2
+  • border border-gray-300 dark:border-gray-600
+  • rounded-lg
+  • focus:ring-2 focus:ring-primary-500
+  • dark:bg-gray-800 dark:text-gray-100
+
+=====================================================
+COMPONENT ARCHITECTURE PATTERNS
+=====================================================
+
+1. All components should:
+   • Support dark mode (dark:* classes)
+   • Include data-testid for testing
+   • Use .smooth-transition for interactions
+   • Follow consistent spacing (p-4, gap-4)
+   • Handle loading and error states
+
+2. Layout Pattern:
+   • Container: max-w-7xl mx-auto px-4
+   • Grid: grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6
+   • Flex: flex items-center justify-between gap-4
+
+3. Responsive Breakpoints:
+   • sm: 640px
+   • md: 768px
+   • lg: 1024px
+   • xl: 1280px
+   • 2xl: 1536px
+
+4. Z-index Layers:
+   • Base content: z-0
+   • Sticky header: z-10
+   • Dropdown/popover: z-20
+   • Modal backdrop: z-40
+   • Modal content: z-50
+
+5. Form Validation:
+   • Error: border-red-500, text-red-600
+   • Success: border-green-500, text-green-600
+   • Warning: border-yellow-500, text-yellow-600
+
+=====================================================
